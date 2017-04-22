@@ -1,5 +1,5 @@
 from flask import Flask,url_for,render_template
-from flask import request
+from flask import request,make_response
 
 app = Flask(__name__)
 
@@ -12,9 +12,17 @@ def index():
 def hello_world(name):
     return render_template('hello.html',name=name)
 
-@app.route('/user/<username>')
-def show_user(username):
-    return 'My name is %s' % username
+## R/W cookies
+@app.route('/wck/<username>/')
+def write_cookies(username):
+    resp=make_response(render_template('index.html'))
+    resp.set_cookie('username',username)
+    return resp
+
+@app.route('/rck/')
+def read_cookies():
+    username=request.cookies.get('username')
+    return username
 
 ##构造url
 with app.test_request_context():

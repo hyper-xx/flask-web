@@ -1,2 +1,2 @@
-# Django-ops
-Django-ops
+# Flask-web
+pracitce for flask-web.
