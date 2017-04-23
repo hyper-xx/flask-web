@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <title>Flask-web</title>
+        <link rel="stylesheet" type="text/css" href="../static/Semantic-UI/semantic.min.css">
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../static/Semantic-UI/semantic.min.js"></script>
+<div class="ui container">
+    <h1>Flask</h1>
+    <div class="ui text container">
+        {% if not session.logged_in %}
+        <a href="{{ url_for('login') }}">login in</a>
+            {% else %}
+            <a href="{{ url_for('logout') }}">log out</a>
+        {% endif %}
+    </div>
+{% for message in get_flashed_messages() %}
+{#    <div class="flash">{{ message }}</div>#}
+    <div class="ui info message">
+  <i class="close icon"></i>
+  <div class="header">
+    Status
+  </div>
+  <ul class="list">
+    <li>{{ message }}</li>
+  </ul>
+</div>
+    {% endfor %}
+{% block body %}{% endblock %}
+
+</div>
