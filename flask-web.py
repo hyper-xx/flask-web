@@ -5,38 +5,57 @@ import sqlite3
 
 
 app = Flask(__name__)
+app.config.from_object(__name__)
+app.config.update(dict(
+    DATABASE=os.path.join(app.root_path, 'flask.db'),
+    SECRET_KEY='development key',
+    USERNAME='admin',
+    PASSWORD='admin'
+))
+app.config.from_envvar('FLASKR_SETTINGS', silent=True)
 
-app.config['DATABASE']='/Users/xuzhengxi/PycharmProjects/flask-web/flask.db'
 
 ##DB
 #connect DB
 def connect_db():
-    rv=sqlite3.connect('/Users/xuzhengxi/PycharmProjects/flask-web/flask.db')
+    rv=sqlite3.connect(app.config['DATABASE'])
     rv.row_factory=sqlite3.Row
     return rv
 
+#get DB
+def get_db():
+    if not hasattr(g,'sqlite_db'):
+        g.sqlite_db=connect_db()
+    return g.sqlite_db
+
 #init DB
 def init_db():
-    with app.app_context():
-        db=connect_db()
-        with app.open_resource('schema.sql','r') as f:
-            g.db.cursor().executescript(f.read())
-        db.commit()
+    db=get_db()
+    with app.open_resource('schema.sql','r') as f:
+        db.cursor().executescript(f.read())
+    db.commit()
+
+@app.cli.command('initdb')
+def initdb_command():
+    init_db()
+    print('Initialized the database.')
 
 ##show entrites
 @app.route('/showen/')
 def show_entries():
-    cur=g.db.execute('select title, text from entries order by id desc')
-    entries=[dict(title=row[0],text=row[1]) for row in cur.fetchall()]
-    return render_template('showen.html',entries=entries)
+    db=get_db()
+    cur=db.execute('select title, text from entries order by id desc')
+    entries=cur.fetchall()
+    return render_template('show_entries.html',entries=entries)
 
 ##add entrites
-@app.route('/adden/')
+@app.route('/adden/',methods=['GET','POST'])
 def add_entry():
     if not session.get('logged_in'):
         abort(401)
-    g.db.execute('insert into entries (title, text) values (?, ?)',[request.form['title'],request.form['text']])
-    g.db.commit()
+    db=get_db()
+    db.execute('insert into entries (title, text) values (?, ?)',[request.form['title'],request.form['text']])
+    db.commit()
     flash('New entry was successfully posted')
     return redirect(url_for('show_entries'))
 
@@ -45,15 +64,15 @@ def add_entry():
 def login():
     error=None
     if request.method=='POST':
-        if request.form['username']!=app.config['USRENAME']:
+        if request.form['username']!=app.config['USERNAME']:
             error='Invalid username'
         elif request.form['password']!=app.config['PASSWORD']:
             error='Invalid password'
         else:
-            session['loggen_in']=True
+            session['logged_in']=True
             flash('You were logged in')
             return redirect(url_for('show_entries'))
-        return render_template('login.html',error=error)
+    return render_template('login.html',error=error)
 
 ##logout
 @app.route('/logout/')

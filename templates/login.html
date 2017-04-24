@@ -2,13 +2,27 @@
 {% block body %}
 <h2>Login</h2>
 {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
-  <form action="{{ url_for('login') }}" method=post>
-    <dl>
-      <dt>Username:
-      <dd><input type=text name=username>
-      <dt>Password:
-      <dd><input type=password name=password>
-      <dd><input type=submit value=Login>
-    </dl>
+  <form class="ui form" action="{{ url_for('login') }}" method=post>
+    <div class="four fields">
+        <div class="field">
+      <label>username:</label>
+  <input type="text" name="username">
+        </div>
+        </div>
+
+  <div class="four fields">
+      <div class="field">
+      <label>password:</label>
+      <input type="password" name="password">
+  </div>
+      </div>
+
+  <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" tabindex="0" class="hidden">
+      <label>我同意条款和条件</label>
+    </div>
+  </div>
+  <button class="ui button" type="submit">提交</button>
   </form>
 {% endblock %}
