@@ -2,6 +2,7 @@ from flask import Flask,url_for,render_template,session,g,redirect,abort,flash
 from flask import request,make_response
 import os
 import sqlite3
+import pymysql
 
 
 app = Flask(__name__)
@@ -13,6 +14,12 @@ app.config.update(dict(
     PASSWORD='admin'
 ))
 app.config.from_envvar('FLASKR_SETTINGS', silent=True)
+
+##DB
+#mysql
+#conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='', db='tkq1', charset='utf8')
+
+
 
 
 ##DB
