@@ -17,7 +17,14 @@ app.config.from_envvar('FLASKR_SETTINGS', silent=True)
 
 ##DB
 #mysql
-#conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='', db='tkq1', charset='utf8')
+conn = pymysql.connect(host='localhost', port=3307, user='root', passwd='123456', db='mydb', charset='utf8')
+cur=conn.cursor()
+cur.execute('select * from people')
+data=cur.fetchall()
+for d in data:
+    print("id:"+str(d[0])+"name:"+d[1])
+cur.close()
+conn.close()
 
 
 

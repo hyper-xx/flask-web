@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6467e900-1c12-4123-a54a-926093fe10a9" name="Default" comment="solved semantic js init.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/Semantic-UI/jquery-3.1.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/Semantic-UI/jquery-3.1.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/flask-web.iml" afterPath="$PROJECT_DIR$/.idea/flask-web.iml" />
+    <list default="true" id="6467e900-1c12-4123-a54a-926093fe10a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flask-web.py" afterPath="$PROJECT_DIR$/flask-web.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layout.html" afterPath="$PROJECT_DIR$/templates/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/show_entries.html" afterPath="$PROJECT_DIR$/templates/show_entries.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="flask-web.iws" />
@@ -24,7 +17,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/flask-web$flask_web.coverage" NAME="flask-web Coverage Results" MODIFIED="1493644445336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/flask-web$flask_web.coverage" NAME="flask-web Coverage Results" MODIFIED="1493647809851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -73,26 +66,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="flask-web.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="flask-web.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flask-web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.8208955">
+              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
-                <marker date="1493459881000" expanded="true" signature="1142:1190" placeholder="select title..entries..." />
-                <marker date="1493459881000" expanded="true" signature="1450:1497" placeholder="insert into ..." />
+                <marker date="1493647807000" expanded="true" signature="582:602" placeholder="select * fro..people..." />
+                <marker date="1493647807000" expanded="true" signature="1301:1349" placeholder="select title..entries..." />
+                <marker date="1493647807000" expanded="true" signature="1609:1656" placeholder="insert into ..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.5/site-packages/flask/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="369" column="13" selection-start-line="369" selection-start-column="13" selection-end-line="369" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -117,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show_entries.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show_entries.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/show_entries.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1081795">
+            <state vertical-scroll-proportion="-17.5">
               <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
               <folding />
             </state>
@@ -183,10 +167,10 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/schema.sql" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/flask-web.py" />
         <option value="$PROJECT_DIR$/templates/layout.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/show_entries.html" />
+        <option value="$PROJECT_DIR$/flask-web.py" />
       </list>
     </option>
   </component>
@@ -555,7 +539,13 @@
       <option name="project" value="LOCAL" />
       <updated>1493050440872</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="solved semantic js init.">
+      <created>1493644572116</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1493644572116</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -577,17 +567,17 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271028" sideWeight="0.5032841" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32866043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958949" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20853859" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271028" sideWeight="0.49671593" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29127726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.290625" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -624,8 +614,9 @@
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
-            <marker date="1493459881000" expanded="true" signature="1142:1190" placeholder="select title..entries..." />
-            <marker date="1493459881000" expanded="true" signature="1450:1497" placeholder="insert into ..." />
+            <marker date="1493647807000" expanded="true" signature="582:602" placeholder="select * fro..people..." />
+            <marker date="1493647807000" expanded="true" signature="1301:1349" placeholder="select title..entries..." />
+            <marker date="1493647807000" expanded="true" signature="1609:1656" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
@@ -699,8 +690,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
-            <marker date="1493459881000" expanded="true" signature="1142:1190" placeholder="select title..entries..." />
-            <marker date="1493459881000" expanded="true" signature="1450:1497" placeholder="insert into ..." />
+            <marker date="1493647807000" expanded="true" signature="582:602" placeholder="select * fro..people..." />
+            <marker date="1493647807000" expanded="true" signature="1301:1349" placeholder="select title..entries..." />
+            <marker date="1493647807000" expanded="true" signature="1609:1656" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
@@ -774,8 +766,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
-            <marker date="1493459881000" expanded="true" signature="1142:1190" placeholder="select title..entries..." />
-            <marker date="1493459881000" expanded="true" signature="1450:1497" placeholder="insert into ..." />
+            <marker date="1493647807000" expanded="true" signature="582:602" placeholder="select * fro..people..." />
+            <marker date="1493647807000" expanded="true" signature="1301:1349" placeholder="select title..entries..." />
+            <marker date="1493647807000" expanded="true" signature="1609:1656" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
@@ -841,8 +834,9 @@
           <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
-            <marker date="1493459881000" expanded="true" signature="1142:1190" placeholder="select title..entries..." />
-            <marker date="1493459881000" expanded="true" signature="1450:1497" placeholder="insert into ..." />
+            <marker date="1493647807000" expanded="true" signature="582:602" placeholder="select * fro..people..." />
+            <marker date="1493647807000" expanded="true" signature="1301:1349" placeholder="select title..entries..." />
+            <marker date="1493647807000" expanded="true" signature="1609:1656" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
@@ -877,8 +871,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
-            <marker date="1493459881000" expanded="true" signature="1142:1190" placeholder="select title..entries..." />
-            <marker date="1493459881000" expanded="true" signature="1450:1497" placeholder="insert into ..." />
+            <marker date="1493647807000" expanded="true" signature="582:602" placeholder="select * fro..people..." />
+            <marker date="1493647807000" expanded="true" signature="1301:1349" placeholder="select title..entries..." />
+            <marker date="1493647807000" expanded="true" signature="1609:1656" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
@@ -977,31 +972,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.5/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="369" column="13" selection-start-line="369" selection-start-column="13" selection-end-line="369" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask-web.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-            <marker date="1493459881000" expanded="true" signature="1142:1190" placeholder="select title..entries..." />
-            <marker date="1493459881000" expanded="true" signature="1450:1497" placeholder="insert into ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1037,9 +1012,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/show_entries.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1081795">
+        <state vertical-scroll-proportion="-17.5">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.9264708">
+          <caret line="369" column="13" selection-start-line="369" selection-start-column="13" selection-end-line="369" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask-web.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8208955">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+            <marker date="1493647807000" expanded="true" signature="582:602" placeholder="select * fro..people..." />
+            <marker date="1493647807000" expanded="true" signature="1301:1349" placeholder="select title..entries..." />
+            <marker date="1493647807000" expanded="true" signature="1609:1656" placeholder="insert into ..." />
+          </folding>
         </state>
       </provider>
     </entry>
