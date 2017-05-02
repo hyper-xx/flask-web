@@ -1,5 +1,7 @@
 from flask import Flask,url_for,render_template,session,g,redirect,abort,flash
 from flask import request,make_response
+from werkzeug import secure_filename
+from openpyxl import load_workbook
 import os
 import sqlite3
 import pymysql
@@ -26,8 +28,28 @@ for d in data:
 cur.close()
 conn.close()
 
+##excel
+#read excel
+@app.route('/rxlsx/')
+def rxlsx():
+    wb1=load_workbook('E:/work/flask/flask-web/upload/451.1.IDCV6.2.1.xlsx')
+    #st=wb1['设备表']
+    sheetnames=wb1.get_sheet_names()
+    st=wb1.get_sheet_by_name(sheetnames[1])
+    #data=st['A1'].value
+    data_dic={}
+    for rx in range(1,10):
+        temp_list=[]
+        pid = st.cell(row = rx,column = 1 ).value
+        w1 = st.cell(row = rx,column = 2 ).value
+        w2 = st.cell(row = rx,column = 3 ).value
+        w3 = st.cell(row = rx,column = 4 ).value
+        w4 = st.cell(row = rx,column = 5 ).value
+        temp_list=[pid,w1,w2,w3,w4]
+        data_dic[pid]=temp_list
 
 
+    return render_template('rxlsx.html',data=temp_list)
 
 ##DB
 #connect DB
@@ -127,7 +149,10 @@ def upload_file():
         return render_template('upload.html')
     if request.method=='POST':
         f=request.files['the_file']
-        f.save('/Users/xuzhengxi/PycharmProjects/flask-web/upload/upload_file.txt')
+        #f.save('/Users/xuzhengxi/PycharmProjects/flask-web/upload/upload_file.txt')
+        filename=secure_filename(f.filename)
+        fpath="E:/work/flask/flask-web/upload/"+filename
+        f.save(fpath)
         return 'upload success.'
 
 
