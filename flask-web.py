@@ -33,23 +33,26 @@ conn.close()
 @app.route('/rxlsx/')
 def rxlsx():
     wb1=load_workbook('E:/work/flask/flask-web/upload/451.1.IDCV6.2.1.xlsx')
-    #st=wb1['设备表']
-    sheetnames=wb1.get_sheet_names()
-    st=wb1.get_sheet_by_name(sheetnames[1])
+    st=wb1['设备表']
+    # sheetnames=wb1.get_sheet_names()
+    # st=wb1.get_sheet_by_name(sheetnames[1])
     #data=st['A1'].value
-    data_dic={}
-    for rx in range(1,10):
-        temp_list=[]
-        pid = st.cell(row = rx,column = 1 ).value
-        w1 = st.cell(row = rx,column = 2 ).value
-        w2 = st.cell(row = rx,column = 3 ).value
-        w3 = st.cell(row = rx,column = 4 ).value
-        w4 = st.cell(row = rx,column = 5 ).value
-        temp_list=[pid,w1,w2,w3,w4]
-        data_dic[pid]=temp_list
+    # data_dic={}
+    # for rx in range(1,10):
+    #     temp_list=[]
+    #     pid = st.cell(row = rx,column = 1 ).value
+    #     w1 = st.cell(row = rx,column = 2 ).value
+    #     w2 = st.cell(row = rx,column = 3 ).value
+    #     w3 = st.cell(row = rx,column = 4 ).value
+    #     w4 = st.cell(row = rx,column = 5 ).value
+    #     temp_list=[pid,w1,w2,w3,w4]
+    #     data_dic[pid]=temp_list
+    list=[]
+    for row in st['A1':'AP']:
+        for cell in row:
+            list.append(cell.value)
 
-
-    return render_template('rxlsx.html',data=temp_list)
+    return render_template('rxlsx.html',data=list)
 
 ##DB
 #connect DB
