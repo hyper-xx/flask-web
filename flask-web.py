@@ -26,13 +26,16 @@ data=cur.fetchall()
 for d in data:
     print("id:"+str(d[0])+"name:"+d[1])
 cur.close()
-conn.close()
+#conn.close()
 
 ##excel
 #read excel
 @app.route('/rxlsx/')
 def rxlsx():
-    wb1=load_workbook('E:/work/flask/flask-web/upload/451.1.IDCV6.2.1.xlsx')
+    #windows
+    #wb1=load_workbook('E:/work/flask/flask-web/upload/451.1.IDCV6.2.1.xlsx')
+    #mac
+    wb1=load_workbook('/Users/xuzhengxi/Desktop/test.xlsx')
     st=wb1['设备表']
     # sheetnames=wb1.get_sheet_names()
     # st=wb1.get_sheet_by_name(sheetnames[1])
@@ -53,6 +56,26 @@ def rxlsx():
             list.append(cell.value)
 
     return render_template('rxlsx.html',data=list)
+
+#insert excel data to mysql
+@app.route('/saveexcel/')
+def save_excel():
+    #conn = pymysql.connect(host='localhost', port=3307, user='root', passwd='123456', db='mydb', charset='utf8')
+    curexcel=conn.cursor()
+    insert_sql='INSERT INTO idc (id, idc, hostname, company_num, place, telecom_ip) VALUES (%s, %s, %s, %s, %s, %s)'
+    wb=load_workbook('/Users/xuzhengxi/PycharmProjects/flask-web/upload/test.xlsx')
+    st=wb['设备表']
+    excel_data=[]
+    for row in st.rows:
+        for cell in row:
+            excel_data.append(cell.value)
+        curexcel.execute(insert_sql,(excel_data[0],excel_data[1],excel_data[2],excel_data[3],excel_data[4],excel_data[5]))
+        excel_data=[]
+    conn.commit()
+    curexcel.close()
+    conn.close()
+
+
 
 ##DB
 #connect DB
@@ -154,7 +177,10 @@ def upload_file():
         f=request.files['the_file']
         #f.save('/Users/xuzhengxi/PycharmProjects/flask-web/upload/upload_file.txt')
         filename=secure_filename(f.filename)
-        fpath="E:/work/flask/flask-web/upload/"+filename
+        #windows
+        #fpath="E:/work/flask/flask-web/upload/"+filename
+        #mac
+        fpath="/Users/xuzhengxi/PycharmProjects/flask-web/upload/"+filename
         f.save(fpath)
         return 'upload success.'
 
